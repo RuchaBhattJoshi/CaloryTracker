@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 import com.ruchabhattjoshi.core.domain.DefaultPreferences
 import com.ruchabhattjoshi.core.domain.preferences.Preferences
 import com.ruchabhattjoshi.core.domain.use_case.FilterOutDigits
+import com.ruchabhattjoshi.onboarding_domain.use_case.ValidateNutrients
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -36,7 +37,7 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideFilterOutDigitsUseCase():FilterOutDigits{
-        return  FilterOutDigits()
+    fun provideFilterOutDigitsUseCase(): FilterOutDigits {
+        return FilterOutDigits()
     }
 }
