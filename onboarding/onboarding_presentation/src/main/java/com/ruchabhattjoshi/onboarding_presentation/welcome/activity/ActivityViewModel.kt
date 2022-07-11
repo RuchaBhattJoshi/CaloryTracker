@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ruchabhattjoshi.calorytracker.navigation.Route
 import com.ruchabhattjoshi.core.domain.model.ActivityLevel
-import com.ruchabhattjoshi.core.domain.model.Gender
 import com.ruchabhattjoshi.core.domain.preferences.Preferences
 import com.ruchabhattjoshi.core.utils.UiEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
