@@ -47,7 +47,6 @@ class AgeViewModel @Inject constructor(
                         UiText.StringResource(R.string.error_age_cant_be_empty)
                     )  //hardcoded string need context use UiText
                 )
-
                 return@launch
             }
             preferences.saveAge(ageNumber)
