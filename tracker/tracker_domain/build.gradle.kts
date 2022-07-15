@@ -5,5 +5,6 @@ apply{
 dependencies{
 
     "implementation"(project(Modules.core))
+    "implementation"(Coroutines.coroutines)
     "implementation"(Coil.coilCompose)
 }

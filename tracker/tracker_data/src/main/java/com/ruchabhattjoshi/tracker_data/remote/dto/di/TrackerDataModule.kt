@@ -1,6 +1,11 @@
 package com.ruchabhattjoshi.tracker_data.remote.dto.di
 
+import android.app.Application
+import androidx.room.Room
 import com.ruchabhattjoshi.tracker_data.remote.dto.OpenFoodApi
+import com.ruchabhattjoshi.tracker_data.remote.dto.local.entity.TrackerDatabase
+import com.ruchabhattjoshi.tracker_data.repository.TrackerRepositoryImpl
+import com.ruchabhattjoshi.tracker_domain.repository.TrackerRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -40,5 +45,27 @@ object TrackerDataModule {
             .client(client)
             .build()
             .create()
+    }
+
+    @Provides
+    @Singleton
+    fun provideTrackerDatabase(app: Application): TrackerDatabase {
+        return Room.databaseBuilder(
+            app,
+            TrackerDatabase::class.java,
+            "tracker_db"
+        ).build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideTrackerRepository(
+        api: OpenFoodApi,
+        db: TrackerDatabase
+    ): TrackerRepository {
+        return TrackerRepositoryImpl(
+            dao = db.dao,
+            api = api
+        )
     }
 }
