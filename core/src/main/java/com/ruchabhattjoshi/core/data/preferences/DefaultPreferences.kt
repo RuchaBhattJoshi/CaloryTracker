@@ -1,4 +1,4 @@
-package com.ruchabhattjoshi.core.domain
+package com.ruchabhattjoshi.core.data.preferences
 
 import android.content.SharedPreferences
 import com.ruchabhattjoshi.core.domain.preferences.Preferences
@@ -6,7 +6,6 @@ import com.ruchabhattjoshi.core.domain.model.ActivityLevel
 import com.ruchabhattjoshi.core.domain.model.Gender
 import com.ruchabhattjoshi.core.domain.model.GoalType
 import com.ruchabhattjoshi.core.domain.model.UserInfo
-
 
 /**
  * Created by ruchajoshi on 21/05/2022
@@ -89,6 +88,19 @@ class DefaultPreferences(
             carbRatio = carbRatio,
             proteinRatio = proteinRatio,
             fatRatio = fatRatio
+        )
+    }
+
+    override fun saveShouldShowOnboarding(shouldShow: Boolean) {
+        sharedPref.edit()
+            .putBoolean(Preferences.KEY_SHOULD_SHOW_ONBOARDING, shouldShow)
+            .apply()
+    }
+
+    override fun loadShouldShowOnboarding(): Boolean {
+        return sharedPref.getBoolean(
+            Preferences.KEY_SHOULD_SHOW_ONBOARDING,
+            true
         )
     }
 }
