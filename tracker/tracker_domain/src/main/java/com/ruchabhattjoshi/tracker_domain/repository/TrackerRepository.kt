@@ -1,7 +1,7 @@
 package com.ruchabhattjoshi.tracker_domain.repository
 
-import com.ruchabhattjoshi.tracker_domain.repository.model.TrackableFood
-import com.ruchabhattjoshi.tracker_domain.repository.model.TrackedFood
+import com.ruchabhattjoshi.tracker_domain.model.TrackableFood
+import com.ruchabhattjoshi.tracker_domain.model.TrackedFood
 import kotlinx.coroutines.flow.Flow
 import java.time.LocalDate
 

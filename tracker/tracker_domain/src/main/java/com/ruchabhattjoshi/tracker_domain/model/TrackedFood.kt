@@ -1,4 +1,4 @@
-package com.ruchabhattjoshi.tracker_domain.repository.model
+package com.ruchabhattjoshi.tracker_domain.model
 
 import java.time.LocalDate
 

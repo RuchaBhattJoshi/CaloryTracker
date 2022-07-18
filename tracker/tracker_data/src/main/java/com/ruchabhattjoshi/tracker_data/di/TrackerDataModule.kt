@@ -1,9 +1,9 @@
-package com.ruchabhattjoshi.tracker_data.remote.dto.di
+package com.ruchabhattjoshi.tracker_data.di
 
 import android.app.Application
 import androidx.room.Room
-import com.ruchabhattjoshi.tracker_data.remote.dto.OpenFoodApi
-import com.ruchabhattjoshi.tracker_data.remote.dto.local.entity.TrackerDatabase
+import com.ruchabhattjoshi.tracker_data.remote.OpenFoodApi
+import com.ruchabhattjoshi.tracker_data.local.TrackerDatabase
 import com.ruchabhattjoshi.tracker_data.repository.TrackerRepositoryImpl
 import com.ruchabhattjoshi.tracker_domain.repository.TrackerRepository
 import dagger.Module

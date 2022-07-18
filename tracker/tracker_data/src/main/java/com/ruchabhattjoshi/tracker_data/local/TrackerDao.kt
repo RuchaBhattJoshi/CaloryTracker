@@ -1,7 +1,7 @@
-package com.ruchabhattjoshi.tracker_data.remote.dto.local.entity
+package com.ruchabhattjoshi.tracker_data.local
 
 import androidx.room.*
-import com.ruchabhattjoshi.tracker_data.remote.dto.local.entity.TrackedFoodEntity
+import com.ruchabhattjoshi.tracker_data.local.entity.TrackedFoodEntity
 import kotlinx.coroutines.flow.Flow
 
 /**

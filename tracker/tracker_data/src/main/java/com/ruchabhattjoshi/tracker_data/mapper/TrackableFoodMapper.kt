@@ -1,7 +1,7 @@
 package com.ruchabhattjoshi.tracker_data.mapper
 
 import com.ruchabhattjoshi.tracker_data.remote.dto.Product
-import com.ruchabhattjoshi.tracker_domain.repository.model.TrackableFood
+import com.ruchabhattjoshi.tracker_domain.model.TrackableFood
 import kotlin.math.roundToInt
 
 /**

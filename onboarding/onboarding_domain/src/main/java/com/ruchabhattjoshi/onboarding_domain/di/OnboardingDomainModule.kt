@@ -1,6 +1,5 @@
-package com.ruchabhattjoshi.onboarding_domain.use_case.di
+package com.ruchabhattjoshi.onboarding_domain.di
 
-import androidx.lifecycle.ViewModel
 import com.ruchabhattjoshi.onboarding_domain.use_case.ValidateNutrients
 import dagger.Module
 import dagger.Provides
