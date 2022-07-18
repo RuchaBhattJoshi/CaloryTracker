@@ -3,11 +3,11 @@ package com.ruchabhattjoshi.tracker_data.repository
 import com.ruchabhattjoshi.tracker_data.mapper.toTrackableFood
 import com.ruchabhattjoshi.tracker_data.mapper.toTrackedFood
 import com.ruchabhattjoshi.tracker_data.mapper.toTrackedFoodEntity
-import com.ruchabhattjoshi.tracker_data.remote.dto.OpenFoodApi
-import com.ruchabhattjoshi.tracker_data.remote.dto.local.entity.TrackerDao
+import com.ruchabhattjoshi.tracker_data.remote.OpenFoodApi
+import com.ruchabhattjoshi.tracker_data.local.TrackerDao
 import com.ruchabhattjoshi.tracker_domain.repository.TrackerRepository
-import com.ruchabhattjoshi.tracker_domain.repository.model.TrackableFood
-import com.ruchabhattjoshi.tracker_domain.repository.model.TrackedFood
+import com.ruchabhattjoshi.tracker_domain.model.TrackableFood
+import com.ruchabhattjoshi.tracker_domain.model.TrackedFood
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import java.time.LocalDate

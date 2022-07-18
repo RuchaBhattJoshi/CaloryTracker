@@ -1,8 +1,8 @@
 package com.ruchabhattjoshi.tracker_data.mapper
 
-import com.ruchabhattjoshi.tracker_data.remote.dto.local.entity.TrackedFoodEntity
-import com.ruchabhattjoshi.tracker_domain.repository.model.MealType
-import com.ruchabhattjoshi.tracker_domain.repository.model.TrackedFood
+import com.ruchabhattjoshi.tracker_data.local.entity.TrackedFoodEntity
+import com.ruchabhattjoshi.tracker_domain.model.MealType
+import com.ruchabhattjoshi.tracker_domain.model.TrackedFood
 import java.time.LocalDate
 
 /**

@@ -1,4 +1,4 @@
-package com.ruchabhattjoshi.tracker_data.remote.dto.local.entity
+package com.ruchabhattjoshi.tracker_data.local.entity
 
 /**
  * Created by ruchajoshi on 14/07/2022
