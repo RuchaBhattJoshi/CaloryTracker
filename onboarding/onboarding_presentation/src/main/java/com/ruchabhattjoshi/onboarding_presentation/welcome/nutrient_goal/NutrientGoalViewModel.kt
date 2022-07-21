@@ -5,7 +5,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.ruchabhattjoshi.calorytracker.navigation.Route
 import com.ruchabhattjoshi.core.domain.preferences.Preferences
 import com.ruchabhattjoshi.core.domain.use_case.FilterOutDigits
 import com.ruchabhattjoshi.core.utils.UiEvent
@@ -65,7 +64,7 @@ class NutrientGoalViewModel @Inject constructor(
                         preferences.saveProteinRatio(result.proteinRatio)
                         preferences.saveFatRatio(result.fatRatio)
                         viewModelScope.launch {
-                            _uiEvent.send(UiEvent.Navigate(Route.TRACKER_OVERVIEW))
+                            _uiEvent.send(UiEvent.Success)
                         }
                     }
                     is ValidateNutrients.Result.Error -> {
