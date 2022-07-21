@@ -5,7 +5,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.ruchabhattjoshi.calorytracker.navigation.Route
 import com.ruchabhattjoshi.core.domain.preferences.Preferences
 import com.ruchabhattjoshi.core.domain.use_case.FilterOutDigits
 import com.ruchabhattjoshi.core.navigation.UiText
@@ -50,7 +49,7 @@ class HeightViewModel @Inject constructor(
                 return@launch
             }
             preferences.saveHeight(heightNumber)
-            _uiEvent.send(UiEvent.Navigate(Route.WEIGHT))
+            _uiEvent.send(UiEvent.Success)
         }
     }
 }

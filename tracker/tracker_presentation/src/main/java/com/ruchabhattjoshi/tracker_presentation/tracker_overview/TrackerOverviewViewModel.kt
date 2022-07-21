@@ -5,7 +5,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.ruchabhattjoshi.calorytracker.navigation.Route
 import com.ruchabhattjoshi.core.domain.preferences.Preferences
 import com.ruchabhattjoshi.core.utils.UiEvent
 import com.ruchabhattjoshi.tracker_domain.use_case.TrackerUseCases
@@ -37,24 +36,11 @@ class TrackerOverviewViewModel @Inject constructor(
     private var getFoodsForDateJob: Job? = null
 
     init {
-        preferences.saveShouldShowOnboarding(false)
+        refreshFoods()
     }
 
     fun onEvent(event: TrackerOverviewEvent) {
         when(event) {
-            is TrackerOverviewEvent.OnAddFoodClick -> {
-                viewModelScope.launch {
-                    _uiEvent.send(
-                        UiEvent.Navigate(
-                            route = Route.SEARCH
-                                    + "/${event.meal.mealType.name}"
-                                    + "/${state.date.dayOfMonth}"
-                                    + "/${state.date.monthValue}"
-                                    + "/${state.date.year}"
-                        )
-                    )
-                }
-            }
             is TrackerOverviewEvent.OnDeleteTrackedFoodClick -> {
                 viewModelScope.launch {
                     trackerUseCases.deleteTrackedFood(event.trackedFood)

@@ -9,7 +9,6 @@ import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
-import com.ruchabhattjoshi.calorytracker.navigation.Route
 import com.ruchabhattjoshi.core.R
 import com.ruchabhattjoshi.core.utils.UiEvent
 import com.ruchabhattjoshi.core_ui.LocalSpacing
@@ -21,7 +20,7 @@ import com.ruchabhattjoshi.onboarding_presentation.welcome.components.ActionButt
 
 @Composable
 fun WelcomeScreen(
-    onNavigate: (UiEvent.Navigate) -> Unit
+    onNextClick: () -> Unit,
 ) {
     val spacing = LocalSpacing.current
     Column(
@@ -39,7 +38,7 @@ fun WelcomeScreen(
         Spacer(modifier = Modifier.height(spacing.spaceMedium))
         ActionButton(
             text = stringResource(id = R.string.next),
-            onClick = { onNavigate(UiEvent.Navigate(Route.GENDER)) },
+            onClick = { onNextClick() },
             modifier = Modifier.align(CenterHorizontally)
         )
     }

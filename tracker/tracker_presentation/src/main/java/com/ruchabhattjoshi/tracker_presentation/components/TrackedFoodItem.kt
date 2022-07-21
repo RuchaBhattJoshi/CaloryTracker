@@ -1,6 +1,5 @@
 package com.ruchabhattjoshi.tracker_presentation.components
 
-
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
